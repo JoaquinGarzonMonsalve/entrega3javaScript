@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(69, 114, 197);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.containerInicio{
+    height: 750px;
+    width: 600px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 25px;
+    border: 20px solid;
+
+
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 150px;
+    width: 400px;
+    background-color: bisque;
+    margin-top: 20px;
+}
+h1{
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+h2{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.imagen{
+    width: 400px;
+    height: 700px;
+}
+.formulario{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.esconder{
+    display: none;
+}
+.invisible{
+    opacity: 0.0;
+}
+
+.visible{
+    opacity: 1;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
