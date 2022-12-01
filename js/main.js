@@ -24,83 +24,7 @@ function despedida( usuarioActivos){
 }
 
 
-function grasaCorporal(peso11, altura11){
-    var indiceMasa=peso11/(altura11*altura11)
-    indiceMasa=parseFloat(indiceMasa)
-    
-    
-    if(indiceMasa<16.00){
 
-    }
-     else if(indiceMasa<16.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes un bajo peso y diagnostico de desnutricion severa" )
-
-         document.write( "<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-         document.write( "<p>"+" tienes un bajo peso y diagnostico de desnutricion severa"+"</p>" )
-        
-    }
-    else if(indiceMasa<17.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes un bajo peso y diagnostico de desnutricion moderada" )
-
-         document.write( "<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-         document.write("<p>"+" tienes un bajo peso y diagnostico de desnutricion moderada"+"</p>" )
-        
-    }
-    else if(indiceMasa<18.50){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes un bajo peso y diagnostico de desnutricion leve" )
-
-         document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-         document.write("<p>"+" tienes un bajo peso y diagnostico de desnutricion leve" +"</p>")
-        
-    }
-    else if(indiceMasa<25.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes un bajo normal" )
-
-         document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-        document.write("<p>"+" tienes un pesp normal" +"</p>")
-        
-    }
-    else if(indiceMasa<29.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes un sobrepeso diagnostrico de pre-obesidad" )
-
-         document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-         document.write("<p>"+" tienes un peso normal"+"</p>" )
-        
-    }
-    else if(indiceMasa<35.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes obesidad grado 1 diagnostrico leve moderado" )
-
-         document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-         document.write("<p>"+" tienes obesidad grado 1 diagnostrico leve moderado" +"</p>")
-        
-    }
-
-    else if(indiceMasa<40.00){
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes obesidad grado 2 diagnostrico obesidad severa" )
-
-        document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-        document.write("<p>"+" tienes obesidad grado 2 diagnostrico obesidad severa" +"</p>")
-        
-    }
-
-    else{
-
-        console.log(" su indice de masa corporal es de " + indiceMasa + " %")
-        console.log(" tienes obesidad grado 3 diagnostrico obesidad morbida" )
-
-        document.write("<p>"+" su indice de masa corporal es de " + indiceMasa + " %"+"</p>")
-        document.write("<p>"+" tienes obesidad grado 3 diagnostrico obesidad morbida" +"</p>")
-
-    }
-
-}
 
 // programas de entrenamientos Gimnasio Fajard
 
@@ -178,7 +102,7 @@ console.log(usuarioJSON)
 const  passEnLocalStorage = localStorage.getItem(" pass ");
 console.log(usuarioEnLocalStorage)
 const  passDespues = JSON.parse( passEnLocalStorage);
-console.log(usuarioDespues)
+console.log(usuarioDespues);
 
     
 
@@ -190,13 +114,20 @@ const contrasenaIngresada = document.querySelector("#pass");
 const intento = document.querySelector("#intento");
 const sub = document.querySelector("#sub");
 const containerFinal = document.querySelector("#containerFinal");
-const peso = document.querySelector("#peso");
-const altura = document.querySelector("#altura");
 
-const boton22 = document.querySelector("#boton2");
 
-var peso1=parseFloat(peso).value;
-var altura1=parseFloat(altura).value;
+// const boton22 = document.querySelector("#boton2");
+
+// var peso1=parseFloat(peso).value;
+// var altura1=parseFloat(altura).value;
+
+// boton22.addEventListener("click", leer);
+
+// function leer(){
+//     const peso2=peso1;
+//     const altura2=altura1;
+
+// }
 
 
 
@@ -212,7 +143,10 @@ ingreso.addEventListener("click", (e)=>{
    const usuario1=usuarioIngresada.value;
    const pass1=contrasenaIngresada.value;
     console.log(usuario1);
-    console.log(pass1);for( i=0; i<usuarioDespues.length; i++){
+    console.log(pass1);
+    
+    for( i=0; i<usuarioDespues.length; i++)
+    {
     
         console.log(i)
         console.log(usuario1)
@@ -222,7 +156,8 @@ ingreso.addEventListener("click", (e)=>{
         
         accesoUser=( usuario1==usuarioDespues[i])
     
-        if(accesoUser== true){
+        if(accesoUser== true)
+        {
             
             usuarioActivo=usuario
             alert(" usuario correcto")
@@ -231,45 +166,48 @@ ingreso.addEventListener("click", (e)=>{
     
             // for de 3 intentos de contraña
     
-            for(j=0; j<3;j++){
+            for(j=0; j<3;j++)
+            {
     
             
             
-            if( pass1==passDespues[i]){
+                if( pass1==passDespues[i])
+                    {
 
 
-                alert(" acceso correcto ")
-                i=5 // fin ciclo usuario
-                j=5  // fin ciclo contrasa
+                    alert(" acceso correcto ")
+                    i=5 // fin ciclo usuario
+                    j=5  // fin ciclo contrasa
 
-                usuarioIngresada.classList.toggle("esconder");
-                contrasenaIngresada.classList.toggle("esconder");
+                     usuarioIngresada.classList.toggle("esconder");
+                     contrasenaIngresada.classList.toggle("esconder");
 
-                containerFinal.classList.toggle("esconder");
+                    containerFinal.classList.toggle("esconder");
                 
-                ingreso.classList.toggle("esconder");
-                primera.classList.toggle("esconder");
-               sub.classList.toggle("esconder");
+                     ingreso.classList.toggle("esconder");
+                    primera.classList.toggle("esconder");
+                     sub.classList.toggle("esconder");
 
-                intento.classList.remove("invisible");
+                    intento.classList.remove("invisible");
                 
 
-                intento.classList.toggle("visible")
-                intento.classList.toggle("invisible")
+                    intento.classList.toggle("visible")
+                    intento.classList.toggle("invisible")
                 
     
                 
-            }
-            else{
-                alert("contraseña incorrecta ")
-            }
+                    }
+                    else
+                    {
+                        alert("contraseña incorrecta ")
+                    }
 
 
+    
+            }
+            
     
         }
-            
-    
-    }
         
         
     }
@@ -278,3 +216,8 @@ ingreso.addEventListener("click", (e)=>{
     
 
 })
+
+
+
+
+
